@@ -41,6 +41,7 @@ model Follows {
 
 model Post {
   id        String    @id @default(auto()) @map("_id") @db.ObjectId
+  content   String
   author    User      @relation(fields: [authorId], references: [id])
   authorId  String    @db.ObjectId
   likes     Like[]
