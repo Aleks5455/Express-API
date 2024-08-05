@@ -35,7 +35,7 @@ const PostController = {
       return res.status(404).json({ error: "Post not found" });
     }
 
-    if (post.authorId != req.user.id) {
+    if (post.authorId != req.user.userId) {
       return res.status(403).json({ error: "No accept" });
     }
 
