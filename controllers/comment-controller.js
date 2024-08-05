@@ -1,5 +1,4 @@
 const { prisma } = require("../prisma/prisma-client");
-const { use } = require("../routes");
 
 const CommentController = {
   createComment: async (req, res) => {
