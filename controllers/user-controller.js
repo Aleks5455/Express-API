@@ -138,11 +138,11 @@ const UserController = {
       res.json(user);
     } catch (error) {
       console.error("Updating User error", error);
-      res.status(500).json({ error: "Internal server error" });
+      res.status(500).json({ error: "Internal server problem" });
     }
   },
   current: async (req, res) => {
-    try {
+    try { 
       const user = await prisma.user.findUnique({
         where: {
           id: req.user.userId,
